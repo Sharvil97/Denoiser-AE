@@ -82,8 +82,8 @@ def main(input_channels, output_channels, lr, num_epochs, offset_epochs, decay_s
     #Dataloader
     composed = transforms.Compose([ImgAugTransform(), RandomCrop((256,256),0.25),Rescale((615, 799)),ToTensor()])
 
-    data_folder_noisy = "./train_noisy/"
-    data_folder_clean = "./train_clean/"
+    data_folder_noisy = "./data/train_noisy/"
+    data_folder_clean = "./data/train_clean/"
     train_dataset = DirtyDocumentsDataset(dirty_dir=data_folder_noisy, clean_dir=data_folder_clean, transform=composed)
 
     train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size)
@@ -224,8 +224,8 @@ if __name__ == "__main__":
     output_channels = 1
     lr = 2e-5
     num_epochs = 1000
-    offset_epochs = 
-    decay_start_epoch = 
+    offset_epochs = 10
+    decay_start_epoch = 25
     batch_size = 128
     output_size_w = 615
     output_size_h = 799

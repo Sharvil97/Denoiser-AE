@@ -1,4 +1,4 @@
-# Denoiser
+# Document  Denoiser
 
 Denoiser is required to clean out the received faxed data on in general any text dcoument recieved which is corrupted due to transmission noise. We have developed the following denoisers in order to clean the documents. The denoisers will reduce the noise in the documents which can be further processed using OCR software for downstream NLP tasks.
 
